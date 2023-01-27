@@ -1,0 +1,584 @@
+@use "color";
+@use "font";
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body{
+    font-family: font.$Inter; 
+    font-size: font.$Font-Size-18px;
+    line-height: 23px;
+    letter-spacing: 0%;
+}
+
+/*Navigation section */
+.container{
+    .navigation-section{
+        background-color: color.$Haiti;
+        header{
+            .navigation{
+                .container{
+                    max-width: 1200px;
+                    width: 83%;
+                    color: color.$White;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin: auto;
+                    padding-top: 18px;
+                    .logo-wrapper{
+                        .logo-text{
+                            font-family: font.$Krona-One;
+                        }
+                    }
+                    .menu-list-wrapper{
+                        .menu-list{
+                            display: flex;
+                            align-items: center;
+                            column-gap: 50px;
+                            line-height: 20px;
+                            font-weight: 00;
+                            font-size: font.$Font-Size-20px;
+                            letter-spacing: 0%;
+                            .navigation-login-button{
+                                column-gap: 50px;
+                                line-height: 20px;
+                                font-weight: 00;
+                                font-size: font.$Font-Size-20px;
+                                padding: 12px 44px;
+                                border-radius: 6px;
+                                color: color.$Black;
+                                letter-spacing: 0%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /*Hero section */
+    .hero-section{
+        background-color: color.$Haiti;
+        header{
+            .container{
+                max-width: 1200px;
+                width: 83%;
+                display: flex;
+                align-items: center;
+                margin: auto;
+                .left-hero-section{
+                    max-width: 744px;
+                    width: 62%;
+                    margin-top: -78px;
+                    .hero-title{
+                        font-family: font.$Krona-One;
+                        font-size: font.$Font-Size-60px;
+                        color: color.$White;
+                        line-height: 75px;
+                        font-weight: 400;
+                    }
+                    .hero-description{
+                        font-size: font.$Font-Size-18px;
+                        color: color.$White;
+                        margin-top: 32px;
+                        line-height: 25px;
+                        font-weight: 500;
+                        max-width: 489px;
+                        width: 66%;
+                    }
+                    .hero-cta-button{
+                        background-color: color.$Chartreuse-Yellow;
+                        padding: 18px 37px;
+                        color: color.$Black;
+                        border-radius: 6px;
+                        line-height: 25px;
+                        letter-spacing: 0%;
+                        font-weight: 500;
+                        font-size: font.$Font-Size-20px;
+                        margin-top: 30px;
+                    }
+                }
+                .right-hero-section{
+                    max-width: 456px;
+                    width: 38%;
+                    .hero-image-wrapper{
+                        width: 100%;
+                        .hero-image{
+                            margin-right: 20px;
+                            margin-left: -162px;
+                            // border: 1px red solid;
+                            transform: translate(0,100px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* Why choose us section */
+    .why-choose-us-section{
+        margin-top: 140px;
+        main{
+            .container{
+                max-width: 1200px;
+                width: 83%;
+                margin: auto;
+                .section-title{
+                    font-family: font.$Krona-One;
+                    max-width: 1036px;
+                    width: 86%;
+                    margin: auto;
+                    font-size: font.$Font-Size-55px;
+                    line-height: 70px;
+                    letter-spacing: -3%;
+                    font-weight: 400;
+                    color: color.$Black;
+                }
+                .why-us-wrapper{
+                    .why-us-video-wrapper{
+                        max-width: 1036px;
+                        width: 86%;
+                        margin: auto;
+                        margin-top: 80px;
+                        position: relative;
+                        .play-button-wrapper{
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            border-radius: 20%;
+                            .play-button{
+                                background-color: color.$Chartreuse-Yellow;
+                                padding: 18.75px 27px 18.75px 28.5px;
+                                border-radius: 20px;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                    .why-us-video-modal-wrapper{
+                        display: none; /* Video modal */
+                    }
+                    .why-choose-us-card-wrapper{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        width: 100%;
+                        margin: auto;
+                        margin-top: 70px;
+                        .card{
+                            background-color: color.$Seashell;
+                            max-width: 386px;
+                            width: 32%;
+                            border-radius: 5px;
+                            cursor: pointer;
+                            .container{
+                                max-width: 312px;;
+                                width: 81%;
+                                padding: 32px 35.91px;
+                                .card-image-wrapper{
+                                    background-color: color.$Black;
+                                    border-radius: 50%;
+                                    width: 69.82px;
+                                    height: 70px;
+                                    position: relative;
+                                    .card-image{
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 50%;
+                                        transform: translate(-50%, -50%);
+                                        border-radius: 20%;
+                                    }
+                                }
+                                .card-title{
+                                    font-family: font.$Krona-One;
+                                    font-size: font.$Font-Size-22px;
+                                    margin-top: 20px;
+                                    font-weight: 400;
+                                }
+                                .card-description{
+                                    width: 100%;
+                                    margin-top: 13px;
+                                }
+                            }
+                            &:hover{
+                                .card-image-wrapper{
+                                    background-color: color.$Chartreuse-Yellow;
+                                }
+                                background-color: color.$Black;
+                                color: color.$White;
+                                .card-description{
+                                    width: 100%;
+                                    color: color.$Silver;
+                                }
+                            }
+                        }
+                    }
+                    .why-us-cta-button{
+                        background-color: color.$Chartreuse-Yellow;
+                        border-radius: 6px;
+                        padding: 18px 47px;
+                        border: 1px color.$Chartreuse-Yellow solid;
+                        cursor: pointer;
+                        font-weight: 500;
+                        font-size: font.$Font-Size-20px;
+                        line-height: 25px;
+                        display: block;
+                        margin: auto;
+                        color: color.$Black;
+                        margin-top: 50px;
+                    }
+                }
+            }
+        }
+    }
+
+    /* Grow your business secition */
+    .grow-your-business-section{
+        main{
+            .container{
+                max-width: 1200px;
+                width: 83%;
+                margin: auto;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 130px;
+                .left-container{
+                    max-width: 577px;
+                    width: 48%;
+                }
+                .right-container{
+                    max-width: 566px;
+                    width: 47%;
+                    margin-top: 20px;
+                    margin-bottom: -82px;
+                    .section-title{
+                        font-family: 'Krona One';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: font.$Font-Size-45px;
+                        line-height: 60px;
+                        letter-spacing: -0.03em;
+                        text-transform: capitalize;
+                        color: color.$Black;
+                    }
+                    .section-description{
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: font.$Font-Size-18px;
+                        line-height: 23px;
+                        color: color.$Black;
+                        margin-top: 21px;
+                    }
+                    .tools-container-wrapper{
+                        margin-top: 40px;
+                        .tools-wrapper{
+                            display: flex;
+                            align-items: flex-start;
+                            margin-bottom: 30px;
+                            width: 92%;
+                            .tools-image-wrapper{
+                                background-color: color.$Black;
+                                padding: 20px;
+                                border-radius: 6px;
+                            }
+                            .tools-information-wrapper{
+                                margin-left: 25px;
+                                .tools-information-title{
+                                    font-family: 'Krona One';
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    font-size: font.$Font-Size-25px;
+                                    line-height: 40px;
+                                    letter-spacing: -0.03em;
+                                    text-transform: capitalize;
+                                    color: color.$Black;
+                                }
+                                .tools-information-description{
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    font-size: font.$Font-Size-18px;
+                                    line-height: 23px;
+                                    color: color.$Black;
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .testimonial-section{
+        margin-top: 187px;
+        main{
+            background-color: color.$Haiti;
+            padding: 64px 0 90px;
+            .container{
+                max-width: 1035px;
+                width: 72%;
+                margin: auto;
+                .testiminial-wrapper{
+                    color: color.$White;
+                    .testimonial-text{
+                        font-family: 'Krona One';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: font.$Font-Size-50px;
+                        line-height: 65px;
+                        letter-spacing: -0.03em;
+                        text-transform: capitalize;
+                        color: color.$White;
+                    }
+                    .testifier-profile-wrapper{
+                        display: flex;
+                        align-items: center;
+                        margin-top: 32px;
+                        .testifier-image{}
+                        .testifier-profile-information{
+                            margin-left: 16.98px;
+                            .testifier-name{
+                                font-style: normal;
+                                font-weight: 600;
+                                font-size: font.$Font-Size-22px;
+                                line-height: 25px;
+                                text-transform: capitalize;
+                                color: color.$White;                                
+                            }
+                            .testifier-work-status{
+                                font-style: normal;
+                                font-weight: 500;
+                                font-size: font.$Font-Size-15px;
+                                line-height: 25px;
+                                text-transform: uppercase;
+                                color: color.$Lavender-Purple;
+                                margin-top: 6px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    /*Early Access Section */
+    .early-access-section{
+        main{
+            .container{
+                max-width: 1200px;
+                width: 83%;
+                margin: auto;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 130px;
+                .left-container{
+                    max-width: 590px;
+                    width: 49%;
+                    .left-container-title{
+                        width: 100%;
+                        font-family: 'Krona One';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: font.$Font-Size-45px;
+                        line-height: 60px;
+                        letter-spacing: -0.03em;
+                        text-transform: capitalize;
+                        color: color.$Black;
+                        
+                    }
+                    .left-container-description{
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: font.$Font-Size-18px;
+                        line-height: 25px;
+                        color: color.$Black;
+                        margin-top: 23px;
+                        width: 96%;
+                        max-width: 471px;
+                    }
+                    .early-access-form-wrapper{
+                        margin-top: 27px;
+                        .early-access-form{
+                            .formkit-alert-success{
+                                color: color.$Red;
+                            }
+                            .full-name-input, .email-input{
+                                padding: 15px 13px;
+                                max-width: 488px;
+                                width: 99%;
+                                color: color.$Haiti-Light;
+                                border: 1px color.$Seashell solid;
+                                background-color: color.$Seashell;
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: font.$Font-Size-18px;
+                                line-height: 25px;
+                            }
+                            .email-input{
+                                margin-top: 20px;
+                            }
+                            .form-submit-button{
+                                width: 162px;
+                                height: 61px;
+                                left: 120px;
+                                top: 4584px;
+                                padding: 18px 47px;
+                                background: color.$Chartreuse-Yellow;
+                                border-radius: 6px;
+                                font-style: normal;
+                                font-weight: 500;
+                                font-size: font.$Font-Size-20px;
+                                line-height: 25px;
+                                text-transform: capitalize;
+                                color: color.$Black;
+                                margin-top: 25px;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+                .right-container{
+                    .early-access-image-wrapper{
+                        max-width: 685px;
+                        width: 57%;
+                        height: 595px;
+                    }
+                }
+            }
+        }
+    }
+
+
+    /* Accordion Section */
+    .faq-section{
+        main{
+            .container{
+                max-width: 1200px;
+                width: 83%;
+                margin: auto;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 140px;
+                .accordion-wrapper{
+                    width: 66%;
+                    max-width: 793px;
+                    margin: auto;
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 25px;
+                    .section-title{
+                        font-family: font.$Plus-Jakarta-Sans;
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 50px;
+                        line-height: 75px;
+                        text-align: center;
+                        text-transform: capitalize;
+                        color: color.$Black;
+                        margin-bottom: 56px;
+                    }
+                    .accordion{
+                        .accordion-info-wrapper{
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            padding: 15px 19px;
+                            background-color: color.$Seashell;
+                            border: 1px color.$Seashell solid;
+                            border-radius: 3px;
+                            cursor: pointer;
+                            .accordion-title{
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: font.$Font-Size-18px;
+                                line-height: 25px;
+                                color: color.$Black;
+                            }
+                        }
+                        .accordion-content-wrapper{
+                            margin-top: 20px;
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    /* Footer Section */
+    .footer-section{
+        footer{
+            background-color: color.$Black;
+            .container{
+                max-width: 1200px;
+                width: 83%;
+                margin: auto;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 135px;
+                color: color.$White;
+                padding: 38px 0;
+                .contact-email, .copyright-text{
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: font.$Font-Size-18px;
+                    line-height: 25px;
+                    color: color.$White;
+                }
+            }
+        }
+    }
+}
